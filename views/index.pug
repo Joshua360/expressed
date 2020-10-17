@@ -1,11 +1,13 @@
 extends layout.pug
 block content
-    section#content
-        section.namecard
+    section.namecard
         .namecard-hello
             p.namecard-greeting Welcome, #{name}!
-            form.namecard-exit(action='/goodbye' method='POST')
-            button(type='submit')
-                img(src='static/img/close.svg')
+            |             
+            form.namecard-exit(action='/goodbye', method='POST')
+                button(type='submit')
+                    img(src='static/img/close.svg')
+        |         
         h1.namecard-prompt Let&apos;s get started
+        |         
         a.namecard-submit(href='/cards') Begin!

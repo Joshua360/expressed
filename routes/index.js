@@ -38,6 +38,11 @@ router.post('/goodbye', (req,res)=>{
 });
 
 
+router.get('/wenare', (req,res)=>{
+    res.render('wenare');
+});
+
+
 
 
 

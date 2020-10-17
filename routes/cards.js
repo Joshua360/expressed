@@ -45,4 +45,20 @@ router.get('/:id', (req,res)=>{
 });
 
 
+//   error
+router.use((req, res,next)=>{
+    const err = new Error('Not found');
+    err.status = 404;
+    next(err);
+
+});
+
+// error handler
+router.use((err, req, res,next)=>{
+    res.locals.error = err;
+    res.status = err.status;
+    res.render('error');
+});
+
+
 module.exports = router;
