@@ -19,9 +19,9 @@ app.use(mainRoutes);
 app.use('/cards', cardRoutes);
 
 
-
-app.listen(3000, ()=>{
-    console.log("App is running on localhost port:3000");
+const port = process.env.PORT;
+app.listen(port, ()=>{
+    console.log(`App is running on post:${port}`);
 });
 
 
